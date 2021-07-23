@@ -1,12 +1,15 @@
 <template>
   <div id="nav">
     <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <router-link to="/about">About Me</router-link>
   </div>
   <router-view/>
 </template>
 
 <style>
+* {
+  font-family: courier;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -21,10 +24,17 @@
 
 #nav a {
   font-weight: bold;
-  color: #2c3e50;
+  font-size: 1.1em;
+  color: #000;
+  text-decoration: none;
+  padding: 0 10px;
+}
+
+#nav a:hover {
+  opacity: 0.8;
 }
 
 #nav a.router-link-exact-active {
-  color: #42b983;
+  color: #de1b31;
 }
 </style>
