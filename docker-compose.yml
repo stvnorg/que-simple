@@ -29,6 +29,8 @@ services:
 
   que-simple:
     build: .
+    volumes:
+      - ./nginx/conf.d/:/etc/nginx/conf.d/
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.whoami.rule=Host(`s.teven.me`)"
